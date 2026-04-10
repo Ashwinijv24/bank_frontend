@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+git remote add origin https://github.com/Ashwinijv24/bank_frontend.gitimport React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './components/Login';
 import CustomerRegister from './components/CustomerRegister';
