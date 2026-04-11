@@ -4,3 +4,6 @@ const BASE_URL = process.env.REACT_APP_API_URL
 
 export const API_BASE = BASE_URL;
 export const API_URL  = `${BASE_URL}/api`;
+
+// Backend: https://bank-app-3-1fn0.onrender.com
+// Frontend: https://enchanting-capybara-9efc5b.netlify.app
