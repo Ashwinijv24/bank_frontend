@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = process.env.REACT_APP_API_URL || 'https://bank-app-aoc8.onrender.com/api';
+const API_URL = process.env.REACT_APP_API_URL || 'https://bank-app-3-1fn0.onrender.com/api';
 
 const api = axios.create({
   baseURL: API_URL,
