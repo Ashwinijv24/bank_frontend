@@ -19,7 +19,7 @@ export default function LoanOfficerDashboard() {
       const token = localStorage.getItem("access_token");
       const headers = { Authorization: `Bearer ${token}` };
 
-      const response = await axios.get("https://bank-app-aoc8.onrender.com/api/loans/", {
+      const response = await axios.get("https://bank-app-3-1fn0.onrender.com/api/loans/", {
         headers,
       });
 
@@ -37,7 +37,7 @@ export default function LoanOfficerDashboard() {
       const headers = { Authorization: `Bearer ${token}` };
 
       await axios.post(
-        `https://bank-app-aoc8.onrender.com/api/loans/${loanId}/approve/`,
+        `https://bank-app-3-1fn0.onrender.com/api/loans/${loanId}/approve/`,
         { amount_approved: selectedLoan.amount_requested },
         { headers }
       );
@@ -57,7 +57,7 @@ export default function LoanOfficerDashboard() {
       const headers = { Authorization: `Bearer ${token}` };
 
       await axios.post(
-        `https://bank-app-aoc8.onrender.com/api/loans/${loanId}/reject/`,
+        `https://bank-app-3-1fn0.onrender.com/api/loans/${loanId}/reject/`,
         { reason: remarks },
         { headers }
       );

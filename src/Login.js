@@ -16,7 +16,7 @@ export default function Login() {
     setLoading(true);
 
     try {
-      const res = await axios.post("https://bank-app-aoc8.onrender.com/api/login/", {
+      const res = await axios.post("https://bank-app-3-1fn0.onrender.com/api/login/", {
         username,
         password,
       });

@@ -21,9 +21,9 @@ export default function FieldOfficerDashboard() {
       const headers = { Authorization: `Bearer ${token}` };
 
       const [customersRes, groupsRes, loansRes] = await Promise.all([
-        axios.get("https://bank-app-aoc8.onrender.com/api/customers/", { headers }),
-        axios.get("https://bank-app-aoc8.onrender.com/api/groups/", { headers }),
-        axios.get("https://bank-app-aoc8.onrender.com/api/loans/", { headers }),
+        axios.get("https://bank-app-3-1fn0.onrender.com/api/customers/", { headers }),
+        axios.get("https://bank-app-3-1fn0.onrender.com/api/groups/", { headers }),
+        axios.get("https://bank-app-3-1fn0.onrender.com/api/loans/", { headers }),
       ]);
 
       setCustomers(customersRes.data);

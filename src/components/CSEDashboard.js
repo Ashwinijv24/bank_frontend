@@ -22,8 +22,8 @@ export default function CSEDashboard() {
       const headers = { Authorization: `Bearer ${token}` };
 
       const [customersRes, accountsRes] = await Promise.all([
-        axios.get("https://bank-app-aoc8.onrender.com/api/customers/", { headers }),
-        axios.get("https://bank-app-aoc8.onrender.com/api/savings-accounts/", { headers }),
+        axios.get("https://bank-app-3-1fn0.onrender.com/api/customers/", { headers }),
+        axios.get("https://bank-app-3-1fn0.onrender.com/api/savings-accounts/", { headers }),
       ]);
 
       setCustomers(customersRes.data);
@@ -46,8 +46,8 @@ export default function CSEDashboard() {
       const headers = { Authorization: `Bearer ${token}` };
       const endpoint =
         transactionType === "deposit"
-          ? `https://bank-app-aoc8.onrender.com/api/savings-accounts/${accountId}/deposit/`
-          : `https://bank-app-aoc8.onrender.com/api/savings-accounts/${accountId}/withdrawal/`;
+          ? `https://bank-app-3-1fn0.onrender.com/api/savings-accounts/${accountId}/deposit/`
+          : `https://bank-app-3-1fn0.onrender.com/api/savings-accounts/${accountId}/withdrawal/`;
 
       const response = await axios.post(
         endpoint,

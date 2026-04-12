@@ -25,9 +25,9 @@ export default function BranchManagerDashboard() {
       const headers = { Authorization: `Bearer ${token}` };
 
       const [customersRes, loansRes, accountsRes] = await Promise.all([
-        axios.get("https://bank-app-aoc8.onrender.com/api/customers/", { headers }),
-        axios.get("https://bank-app-aoc8.onrender.com/api/loans/", { headers }),
-        axios.get("https://bank-app-aoc8.onrender.com/api/savings-accounts/", { headers }),
+        axios.get("https://bank-app-3-1fn0.onrender.com/api/customers/", { headers }),
+        axios.get("https://bank-app-3-1fn0.onrender.com/api/loans/", { headers }),
+        axios.get("https://bank-app-3-1fn0.onrender.com/api/savings-accounts/", { headers }),
       ]);
 
       const totalSavings = accountsRes.data.reduce(
@@ -58,7 +58,7 @@ export default function BranchManagerDashboard() {
       const headers = { Authorization: `Bearer ${token}` };
 
       await axios.post(
-        `https://bank-app-aoc8.onrender.com/api/loans/${loanId}/disburse/`,
+        `https://bank-app-3-1fn0.onrender.com/api/loans/${loanId}/disburse/`,
         {},
         { headers }
       );
