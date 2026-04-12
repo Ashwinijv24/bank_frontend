@@ -50,6 +50,11 @@ function Login({ setUser }) {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
+  // Wake up Render backend on page load
+  React.useEffect(() => {
+    fetch('https://bank-app-3-1fn0.onrender.com/').catch(() => {});
+  }, []);
+
   const handleStaffRoleSelect = (role) => {
     setSelectedRole(role);
     setUsername('');
@@ -77,7 +82,7 @@ function Login({ setUser }) {
       navigate('/dashboard');
     } catch (err) {
       if (err.response?.status === 401) setError('Invalid username or password');
-      else if (!err.response) setError('Cannot connect to server. Is the backend running?');
+      else if (!err.response) setError('⏳ Server is waking up (free tier). Please wait 30 seconds and try again.');
       else setError(err.response?.data?.detail || 'Login failed');
     } finally {
       setLoading(false);
