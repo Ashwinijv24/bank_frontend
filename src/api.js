@@ -45,3 +45,5 @@ export default api;
 
 export const registerCustomer = (data) =>
   axios.post(`${API_URL}/register/register/`, data);
+
+// v2 - bank-app-3-1fn0.onrender.com
